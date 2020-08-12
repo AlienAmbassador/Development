@@ -18,8 +18,9 @@ type Candle struct {
 	minPriceTime time.Time
 }
 
-type User struct{
-	id string
+// User - структура юзера
+type User struct {
+	id      string
 	tickers map[string]map[string]float64
 }
 
@@ -29,7 +30,7 @@ func main() {
 	fmt.Println(candles)
 	fmt.Println(users)
 }
-// todo lalalal
+
 func mapCandles(candles [][]string) map[string]Candle {
 	maxRevenueMap := make(map[string]Candle)
 	for _, candle := range candles {
@@ -57,19 +58,10 @@ func mapCandles(candles [][]string) map[string]Candle {
 	return maxRevenueMap
 }
 
-func UserDeals(users[][]string)map[string]{
+func UserDeals(users [][]string) map[string]User {
 	userInfo := make(map[string]User)
 
-	for _, user := range users{
-		if note, ok := UserDeals[info[user[0]]]; ok {
-			salePrice := stringToFloat(user[4])
-			note.tickers[user[2]]["salePrice"]=salePrice
-			note.tickers[user[2]]["income"]=note.tickers[user[2]]["salePrice"]-note.tickers[user[2]]["buyPrice"]
-
-		}else {
-
-		}
-	}
+	return userInfo
 }
 
 // функция для чтения csv файла
